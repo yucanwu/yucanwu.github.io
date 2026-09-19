@@ -124,12 +124,12 @@
         <h2>5-DOF service arm</h2>
         <p>The arm uses an R-P-R-R-R serial chain: base yaw, a 200 mm vertical prismatic axis, and three coplanar pitch joints. Its passive hook end-effector is intended for simple, robust interactions such as pressing elevator buttons, presenting access credentials, and hooking or placing delivery bags.</p>
 
-        <div class="media-pair">
-          <figure class="media-card">
+        <div class="media-pair arm-demo-pair">
+          <figure class="media-card arm-bench-card">
             <img src="../assets/lumeo/public/arm-testing.jpg" alt="Lumeo robotic arm during ROS 2 and CAN motor control testing">
             <figcaption class="media-caption"><strong>Arm control bench test</strong><span>Manipulator, control hardware, power supply, and ROS 2 debugging environment during integration.</span></figcaption>
           </figure>
-          <figure class="media-card">
+          <figure class="media-card elevator-card">
             <img src="../assets/lumeo/public/elevator-demo.jpg" alt="Lumeo robotic arm pressing an elevator button during a teleoperated demonstration">
             <figcaption class="media-caption"><strong>Elevator-button interaction demo</strong><span>The arm demonstrated the required reach and physical interaction on the vehicle under teleoperation.</span></figcaption>
           </figure>
@@ -163,24 +163,31 @@
         <h2>ROS 2 / CAN control architecture</h2>
         <p>My current implementation work is concentrated on the three pitch joints. The motor-debug/control package runs in Python on Ubuntu/ROS 2 and communicates through Linux SocketCAN → USB-CAN → servo actuators.</p>
 
-        <div class="arch">
-          <span class="arch-label">Planned full-arm control stack</span>
-Orin Nano
-Linux + ROS 2
-Perception / Planning / MoveIt / Kinematics
-        │
-        ▼
-5-axis target states
-        │
-        ▼
-dm_mc02_bridge
-        │
-        ▼
-DM-MC02 / STM32
-Realtime execution + safety + watchdog + CAN
-   ├── joint1 · industrial servo · revolute
-   ├── joint2 · industrial servo · prismatic
-   └── joint3–5 · 3× servo actuators · revolute
+        <div class="control-stack">
+          <div class="control-stack-title">Planned full-arm control stack</div>
+          <div class="stack-stage">
+            <span class="stack-kicker">High-level compute</span>
+            <strong>Orin Nano · Ubuntu · ROS 2</strong>
+            <span>Perception · Planning · MoveIt · Kinematics</span>
+          </div>
+          <div class="stack-arrow">↓ <span>5-axis target states</span></div>
+          <div class="stack-stage">
+            <span class="stack-kicker">ROS 2 / CAN bridge</span>
+            <strong>dm_mc02_bridge</strong>
+            <span>Linux SocketCAN · command conversion · state feedback</span>
+          </div>
+          <div class="stack-arrow">↓</div>
+          <div class="stack-stage">
+            <span class="stack-kicker">Realtime execution</span>
+            <strong>DM-MC02 / STM32</strong>
+            <span>Safety · watchdog · low-level control · CAN communication</span>
+          </div>
+          <div class="stack-arrow">↓ <span>joint commands / feedback</span></div>
+          <div class="stack-joints">
+            <div class="stack-joint"><b>Joint 1</b><span>Industrial servo · revolute</span></div>
+            <div class="stack-joint"><b>Joint 2</b><span>Industrial servo · prismatic</span></div>
+            <div class="stack-joint"><b>Joints 3–5</b><span>3× servo actuators · revolute</span></div>
+          </div>
         </div>
 
         <div class="project-copy-grid">
