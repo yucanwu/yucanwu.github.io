@@ -122,3 +122,119 @@
     grid-template-columns:repeat(2,1fr);
   }
 }
+
+/* --- Arm demo comparison --- */
+.arm-demo-pair{
+  grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+  align-items:stretch;
+}
+.arm-demo-pair .media-card{
+  display:flex;
+  flex-direction:column;
+}
+.arm-demo-pair .media-card img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+}
+.arm-demo-pair .arm-bench-card img{
+  object-position:center 48%;
+}
+.arm-demo-pair .elevator-card img{
+  object-position:center 62%;
+}
+.arm-demo-pair .media-caption{
+  flex:1;
+}
+
+/* --- Control architecture diagram --- */
+.control-stack{
+  margin-top:20px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:22px;
+  background:#07101b;
+}
+.control-stack-title{
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:750;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:16px;
+}
+.stack-stage{
+  border:1px solid #2f4565;
+  border-radius:15px;
+  padding:16px 18px;
+  background:rgba(255,255,255,.025);
+}
+.stack-stage strong{
+  display:block;
+  font-size:1.02rem;
+  margin-bottom:4px;
+}
+.stack-stage span{
+  display:block;
+  color:var(--muted);
+  font-size:.88rem;
+}
+.stack-stage .stack-kicker{
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.7rem;
+  font-weight:700;
+  margin-bottom:5px;
+}
+.stack-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:42px;
+  color:var(--accent);
+  font-weight:800;
+}
+.stack-arrow span{
+  color:var(--muted);
+  font-weight:500;
+  font-size:.82rem;
+}
+.stack-joints{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+.stack-joint{
+  border:1px solid #2f4565;
+  border-radius:13px;
+  padding:12px;
+  background:rgba(103,213,255,.03);
+}
+.stack-joint b{
+  display:block;
+  margin-bottom:3px;
+}
+.stack-joint span{
+  color:var(--muted);
+  font-size:.8rem;
+}
+.award .small{
+  display:block;
+  margin-top:3px;
+}
+
+@media (max-width:850px){
+  .arm-demo-pair{
+    grid-template-columns:1fr;
+  }
+  .arm-demo-pair .media-card img{
+    height:auto;
+    object-fit:contain;
+    object-position:center;
+  }
+  .stack-joints{
+    grid-template-columns:1fr;
+  }
+}
