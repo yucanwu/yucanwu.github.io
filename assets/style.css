@@ -238,3 +238,212 @@
     grid-template-columns:1fr;
   }
 }
+
+
+/* --- RoboMaster project page --- */
+.rm-overview-pair .media-card img{
+  height:320px;
+  object-fit:cover;
+}
+.rm-cad-hero img{
+  max-height:520px;
+  object-fit:contain;
+  background:#eef2f6;
+}
+.rm-cad-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:16px;
+}
+.rm-cad-card{
+  display:flex;
+  flex-direction:column;
+}
+.rm-cad-card img{
+  width:100%;
+  height:260px;
+  object-fit:contain;
+  background:#eef2f6;
+}
+.rm-cad-card .media-caption{
+  flex:1;
+}
+.rm-process-flow{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:20px 0;
+  color:#c3cfdf;
+}
+.rm-process-flow span{
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:8px 12px;
+  background:rgba(255,255,255,.025);
+  font-size:.86rem;
+}
+.rm-process-flow b{
+  color:var(--accent);
+}
+.rm-integration-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+.rm-integration-grid .media-card{
+  display:flex;
+  flex-direction:column;
+}
+.rm-integration-grid img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+.rm-integration-grid .media-caption{
+  flex:1;
+}
+.rm-carousel{
+  margin-top:22px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:16px;
+  background:rgba(255,255,255,.018);
+}
+.rm-carousel-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:14px;
+}
+.rm-carousel-head strong{
+  display:block;
+}
+.rm-carousel-head span{
+  color:var(--muted);
+  font-size:.82rem;
+}
+.rm-carousel-controls{
+  display:flex;
+  gap:8px;
+}
+.rm-carousel-btn{
+  width:38px;
+  height:38px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--panel);
+  color:var(--text);
+  cursor:pointer;
+  font:inherit;
+  font-weight:750;
+}
+.rm-carousel-btn:hover{
+  border-color:#385277;
+  transform:translateY(-1px);
+}
+.rm-carousel-track{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:minmax(84%,1fr);
+  gap:14px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+  overscroll-behavior-inline:contain;
+  padding-bottom:2px;
+}
+.rm-carousel-track::-webkit-scrollbar{display:none}
+.rm-carousel-slide{
+  scroll-snap-align:start;
+  min-width:0;
+}
+.rm-carousel-slide img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+}
+.rm-carousel-dots{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  margin-top:12px;
+}
+.rm-carousel-dot{
+  width:7px;
+  height:7px;
+  border-radius:999px;
+  border:0;
+  padding:0;
+  background:#42526c;
+}
+.rm-carousel-dot.active{
+  width:20px;
+  background:var(--accent);
+}
+.rm-competition-strip{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:16px;
+}
+.rm-competition-strip .media-card{
+  display:flex;
+  flex-direction:column;
+}
+.rm-competition-strip img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+.rm-competition-strip .media-caption{
+  flex:1;
+}
+.rm-leadership-pair .media-card{
+  display:flex;
+  flex-direction:column;
+}
+.rm-leadership-pair img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+}
+.rm-leadership-pair .media-caption{
+  flex:1;
+}
+@media (max-width:850px){
+  .rm-cad-grid,.rm-integration-grid,.rm-competition-strip{
+    grid-template-columns:1fr;
+  }
+  .rm-overview-pair .media-card img,
+  .rm-cad-card img,
+  .rm-integration-grid img,
+  .rm-competition-strip img,
+  .rm-leadership-pair img{
+    height:auto;
+    object-fit:contain;
+  }
+  .rm-carousel{
+    padding:12px;
+  }
+  .rm-carousel-track{
+    grid-auto-columns:92%;
+  }
+  .rm-carousel-slide img{
+    height:58vw;
+    min-height:260px;
+    max-height:430px;
+  }
+}
+@media (max-width:560px){
+  .rm-carousel-head{
+    align-items:flex-start;
+  }
+  .rm-carousel-slide img{
+    height:62vw;
+    min-height:230px;
+  }
+}
