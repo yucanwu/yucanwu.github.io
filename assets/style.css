@@ -363,8 +363,9 @@
 }
 .rm-carousel-slide img{
   width:100%;
-  height:420px;
-  object-fit:cover;
+  height:500px;
+  object-fit:contain;
+  background:#050b13;
 }
 .rm-carousel-dots{
   display:flex;
@@ -445,5 +446,45 @@
   .rm-carousel-slide img{
     height:62vw;
     min-height:230px;
+  }
+}
+
+
+/* --- Featured project card balance --- */
+.lumeo-featured .featured-project-body{
+  grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);
+}
+.lumeo-featured .featured-project-image img{
+  min-height:0;
+  height:310px;
+  object-fit:cover;
+}
+.rm-featured .featured-project-body{
+  grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);
+}
+.rm-featured .featured-project-image{
+  background:#020306;
+}
+.rm-featured .featured-project-image img{
+  min-height:0;
+  height:360px;
+  object-fit:contain;
+  object-position:center;
+  background:#020306;
+}
+@media (max-width:850px){
+  .lumeo-featured .featured-project-image img{
+    height:230px;
+    object-fit:cover;
+  }
+  .rm-featured .featured-project-image img{
+    height:330px;
+    object-fit:contain;
+    background:#020306;
+  }
+}
+@media (max-width:560px){
+  .rm-featured .featured-project-image img{
+    height:280px;
   }
 }
