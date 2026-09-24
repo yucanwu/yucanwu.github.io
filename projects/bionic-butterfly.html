@@ -5,7 +5,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Bio-Inspired Robotic Butterfly — Yucan Wu</title>
   <link rel="stylesheet" href="../assets/style.css">
-</head>
+<style>
+.butterfly-cover img{object-fit:contain;background:#17191d}
+.butterfly-version{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.butterfly-version-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:16px}
+.butterfly-version-head>div{min-width:110px}
+.butterfly-version-head span{display:block;color:var(--muted);font-size:.72rem;font-weight:750;text-transform:uppercase;letter-spacing:.12em}
+.butterfly-version-head strong{display:block;color:var(--accent);font-size:2rem;line-height:1.05}
+.butterfly-version-head p{margin:0;color:#c3cfdf;max-width:560px;text-align:right}
+.butterfly-v1-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:14px}
+.butterfly-v1-grid .butterfly-main-card{grid-row:span 2}
+.butterfly-v1-grid .media-card,.butterfly-two-grid .media-card,.butterfly-v3-grid .media-card{display:flex;flex-direction:column}
+.butterfly-v1-grid img{width:100%;height:250px;object-fit:contain;background:#050b13}
+.butterfly-v1-grid .butterfly-main-card img{height:100%;min-height:520px;object-fit:contain}
+.butterfly-v1-grid .media-caption,.butterfly-two-grid .media-caption,.butterfly-v3-grid .media-caption{flex:1}
+.butterfly-two-grid,.butterfly-v3-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.butterfly-two-grid img,.butterfly-v3-grid img{width:100%;height:330px;object-fit:contain;background:#050b13}
+.butterfly-cad-card img{background:#eef2f6}
+.butterfly-carousel .rm-carousel-slide img{height:520px;object-fit:contain}
+@media (max-width:850px){
+.butterfly-version-head{align-items:flex-start}
+.butterfly-version-head p{text-align:left}
+.butterfly-v1-grid,.butterfly-two-grid,.butterfly-v3-grid{grid-template-columns:1fr}
+.butterfly-v1-grid .butterfly-main-card{grid-row:auto}
+.butterfly-v1-grid img,.butterfly-v1-grid .butterfly-main-card img,.butterfly-two-grid img,.butterfly-v3-grid img{height:auto;min-height:0}
+.butterfly-carousel .rm-carousel-slide img{height:58vw;min-height:260px;max-height:430px}
+}
+@media (max-width:560px){
+.butterfly-version-head{display:block}
+.butterfly-version-head p{margin-top:8px}
+.butterfly-carousel .rm-carousel-slide img{height:62vw;min-height:230px}
+}
+</style></head>
 <body>
 <div class="nav-wrap">
   <div class="container nav">
