@@ -177,7 +177,7 @@
     <a class="back" href="../index.html#projects">← Back to projects</a>
     <span class="eyebrow">Space Robotics · Student Research / Innovation Project</span>
     <h1>Lunar Lava Tube Exploration Robot</h1>
-    <p class="lead">A first-generation terrestrial prototype exploring how streaming 3D reconstruction, all-terrain mobility, and a reconfigurable sensor mast could be packaged into a robotic platform for lunar lava-tube reconnaissance. I contributed to the overall mechanical concept, top-side component layout, and the 3-DOF camera mast / gimbal.</p>
+    <p class="lead">A first-generation terrestrial prototype exploring how our team could bring streaming 3D reconstruction, all-terrain mobility, and a reconfigurable sensor mast into a robotic platform for lunar lava-tube reconnaissance. I contributed to the overall mechanical concept, top-side component layout, the 3-DOF camera mast / gimbal, and a stand-off tethered deployment concept for vertical skylight entrances.</p>
     <div class="tags">
       <span class="tag">Space Robotics</span>
       <span class="tag">SolidWorks</span>
@@ -212,7 +212,7 @@
         <div class="project-copy-grid">
           <div class="info-card">
             <h3>Streaming 3D reconstruction</h3>
-            <p>The perception concept builds on <strong>MeMix</strong>, external research by a fellow student and collaborators on long-horizon streaming 3D reconstruction. We treated that reconstruction capability as a research foundation to explore a lunar-lava-tube application rather than presenting the algorithm itself as our contribution.</p>
+            <p>The project was initiated around <strong>MeMix</strong>, a streaming 3D reconstruction method developed by our project leader with research collaborators. Within this project, we explored how that team-owned research capability could be embodied in a mobile robotic platform for lunar-lava-tube mapping; my own work was on the mechanical and system-integration side rather than the reconstruction algorithm.</p>
           </div>
           <div class="info-card">
             <h3>Lunar lava-tube mission context</h3>
@@ -227,17 +227,17 @@
           <div class="info-card">
             <h3>Mechanical architecture</h3>
             <ul>
-              <li>Contributed to the overall mechanical configuration for the lunar-use scenario.</li>
-              <li>Designed the top-side arrangement of sensing and onboard components.</li>
-              <li>Used SolidWorks to develop the mechanical layout around the rover platform.</li>
+              <li>Contributed throughout team discussions on the overall mechanical configuration for the lunar-use scenario.</li>
+              <li>Jointly selected the six-wheel rocker-bogie concept with a teammate; he led the detailed chassis CAD and assembly, while we continued to discuss and support each other across subsystem integration.</li>
+              <li>Designed the top-side arrangement of sensing and onboard components and used SolidWorks for the mechanical layout around my assigned subsystems.</li>
             </ul>
           </div>
           <div class="info-card">
-            <h3>Sensor mast / gimbal</h3>
+            <h3>Sensor mast & deployment concept</h3>
             <ul>
               <li>Designed and assembled the 3-DOF yaw-pitch-pitch camera mechanism.</li>
-              <li>Enabled height adjustment and wide viewing coverage for obstacle look-over and side-wall observation.</li>
-              <li>Supported side-facing image capture while the rover moves forward for 3D reconstruction tests.</li>
+              <li>Enabled height adjustment and wide viewing coverage for obstacle look-over and side-wall observation during forward motion.</li>
+              <li>Proposed a stand-off ropeway-and-tether concept for lowering a sub-rover into steep skylight entrances while keeping the mother rover away from the unstable rim.</li>
             </ul>
           </div>
         </div>
@@ -248,7 +248,7 @@
         <div class="lunar-architecture">
           <div class="info-card">
             <strong>Rocker-bogie mobility</strong>
-            <p>A six-wheel rocker-bogie layout was selected to improve passive terrain adaptation over uneven surfaces and obstacle-like terrain.</p>
+            <p>Our team selected a six-wheel rocker-bogie layout to improve passive terrain adaptation over uneven surfaces and obstacle-like terrain. I participated in choosing and refining the concept; detailed chassis design and assembly were led by another teammate.</p>
           </div>
           <div class="info-card">
             <strong>Perception stack</strong>
@@ -355,25 +355,30 @@
       </section>
 
       <section class="project-section">
-        <h2>Vertical-skylight deployment concept</h2>
-        <p>A rover that works inside a lava tube must first reach it. For steep or near-vertical skylight entrances, we considered a <strong>mother-child rover architecture</strong>: the surface rover reaches and surveys the rim, then lowers a smaller exploration unit by tether. The tether can also provide a practical path for recovery, power, and communication while the sub-rover performs underground sensing.</p>
+        <h2>Stand-off vertical-skylight deployment concept</h2>
+        <p>Prior studies already propose tethered sub-robots for vertical lava-tube entrances. Building on that general idea, I proposed a more specific <strong>stand-off ropeway-and-tether arrangement</strong> for the case where the rim is too steep or unstable for the mother rover to approach safely. Directly lowering a sub-rover from farther back would drag the tether across the ground and make the landing attitude difficult to control. My concept separates horizontal positioning from vertical descent: a lightweight ropeway moves the sub-rover to a controlled suspension point, after which a lowering line performs the descent.</p>
 
         <div class="lunar-deployment">
-          <div class="step"><b>1 · Surface approach</b><span>Mother rover transports the exploration unit to the lava-tube entrance.</span></div>
-          <div class="step"><b>2 · Rim survey</b><span>Perception sensors inspect local geometry and select a deployment point.</span></div>
-          <div class="step"><b>3 · Tethered descent</b><span>A compact sub-rover is lowered through the skylight rather than driving over a vertical drop.</span></div>
-          <div class="step"><b>4 · Underground mapping</b><span>The sub-rover explores the interior while sending sensing data back through the mother platform.</span></div>
+          <div class="step"><b>1 · Keep the mother rover back</b><span>The main rover remains at a safer stand-off distance instead of driving to the unstable skylight edge.</span></div>
+          <div class="step"><b>2 · Establish a ropeway</b><span>A fixed support / anchor and the mother rover form a lightweight cable path toward the deployment point.</span></div>
+          <div class="step"><b>3 · Translate to suspension point</b><span>The sub-rover moves along the cable until it reaches a controlled hanging position above the descent path.</span></div>
+          <div class="step"><b>4 · Stabilized vertical lowering</b><span>A separate tether lowers the sub-rover into the tube while reducing ground abrasion and helping control attitude before touchdown.</span></div>
+        </div>
+
+        <div class="callout" style="margin-top:18px">
+          <strong>Concept status</strong>
+          <p style="margin-bottom:0">This remained a system-level deployment concept rather than a built mechanism. Lunar gravity would reduce line loads and could support lighter tethering hardware, but anchor design, line dynamics, descent control, and fault recovery would still require dedicated engineering validation.</p>
         </div>
       </section>
 
       <section class="project-section">
         <h2>References & research basis</h2>
-        <p>Because this project is an application-oriented prototype built on existing research, I prefer to make the research basis explicit rather than imply that the reconstruction algorithm or lunar mission architecture originated with our team.</p>
+        <p>This application-oriented prototype combines research originating within our team with prior lunar-exploration literature. The references below separate the reconstruction work led by our project leader from the external mission studies that informed the lunar-lava-tube scenario.</p>
 
         <div class="lunar-reference-grid">
           <div class="lunar-ref">
             <strong>MeMix: Writing Less, Remembering More for Streaming 3D Reconstruction</strong>
-            <p>External 3D-reconstruction research used as the perception foundation for this application concept.</p>
+            <p>Streaming 3D-reconstruction research developed by our project leader with collaborators and used as the perception foundation for this application concept.</p>
             <div class="lunar-ref-links">
               <a href="https://arxiv.org/abs/2603.15330" target="_blank" rel="noopener">Paper</a>
               <a href="https://dongjiacheng06.github.io/MeMix/" target="_blank" rel="noopener">Project page</a>
@@ -395,13 +400,13 @@
       <h3>Project info</h3>
       <dl>
         <dt>Role</dt>
-        <dd>Mechanical Design Team Member</dd>
+        <dd>Mechanical Design Team Member · Sensor Mast Designer</dd>
 
         <dt>Period</dt>
         <dd>2025</dd>
 
         <dt>Mechanical focus</dt>
-        <dd>System Configuration · Component Layout · 3-DOF Sensor Mast</dd>
+        <dd>System Configuration · Component Layout · 3-DOF Sensor Mast · Deployment Concept</dd>
 
         <dt>Mobility</dt>
         <dd>6-Wheel Rocker-Bogie</dd>
@@ -414,6 +419,9 @@
 
         <dt>Tool</dt>
         <dd>SolidWorks</dd>
+
+        <dt>Status</dt>
+        <dd>First prototype completed · project later paused</dd>
 
         <dt>Programs</dt>
         <dd>Zhejiang University Qizhen Wenxue · 2025 Dandelion Innovation & Entrepreneurship Competition Preliminary Round</dd>
