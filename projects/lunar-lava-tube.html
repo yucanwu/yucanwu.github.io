@@ -1,1 +1,427 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lunar Lava Tube Robot — Yucan Wu</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="nav-wrap"><div class="container nav"><a class="brand" href="../index.html"><span class="brand-mark">YW</span>Yucan Wu</a></div></div><header class="project-hero"><div class="container"><a class="back" href="../index.html#projects">← Back to projects</a><span class="eyebrow">Student research / innovation project</span><h1>Lunar Lava Tube Exploration Robot</h1><p class="lead">Mechanical concept development for a mobile robot intended for lunar lava-tube exploration.</p><div class="tags"><span class="tag">Space Robotics</span><span class="tag">SolidWorks</span><span class="tag">3D Printing</span><span class="tag">Carbon Fiber</span><span class="tag">Gimbal</span></div></div></header><section class="section" style="padding-top:28px"><div class="container project-layout"><main class="project-main"><div class="content-block"><h2>Overview</h2><p>This project explored a mobile robotic platform for lunar lava-tube environments and was associated with Zhejiang University's Qizhen Wenxue program and the 2025 Dandelion Innovation & Entrepreneurship Competition preliminary round.</p></div><div class="content-block"><h2>My contribution</h2><ul><li>Contributed to the overall mechanical configuration intended for lunar operating conditions.</li><li>Designed the top-side component layout.</li><li>Designed and assembled the camera gimbal.</li><li>Produced SolidWorks designs for 3D-printed and carbon-fiber components.</li></ul></div><div class="content-block"><h2>Media & evidence</h2><div class="media-grid"><div class="media-slot"><strong>Robot prototype</strong><span>To be added</span></div><div class="media-slot"><strong>Camera gimbal</strong><span>To be added</span></div><div class="media-slot"><strong>CAD assembly</strong><span>To be added</span></div><div class="media-slot"><strong>Project photo</strong><span>To be added</span></div></div></div></main><aside class="sidebar panel"><h3>Project info</h3><dl><dt>Role</dt><dd>Mechanical Design Team Member</dd><dt>Period</dt><dd>2025</dd></dl></aside></div></section></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lunar Lava Tube Exploration Robot — Yucan Wu</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .lunar-cover img{
+      object-fit:contain;
+      background:#080d14;
+      max-height:760px;
+    }
+    .lunar-two-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .lunar-two-grid .media-card,
+    .lunar-test-grid .media-card{
+      display:flex;
+      flex-direction:column;
+    }
+    .lunar-two-grid img{
+      width:100%;
+      height:380px;
+      object-fit:contain;
+      background:#080d14;
+    }
+    .lunar-two-grid .media-caption,
+    .lunar-test-grid .media-caption{
+      flex:1;
+    }
+    .lunar-architecture{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .lunar-architecture .info-card{
+      padding:20px;
+    }
+    .lunar-architecture .info-card strong{
+      display:block;
+      color:var(--accent);
+      margin-bottom:7px;
+      font-size:1.05rem;
+    }
+    .lunar-architecture .info-card p{
+      margin:0;
+      color:#c3cfdf;
+    }
+    .lunar-carousel .rm-carousel-slide img{
+      height:540px;
+      object-fit:contain;
+      background:#050b13;
+    }
+    .lunar-test-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .lunar-test-grid .terrain-card{
+      grid-column:1/-1;
+    }
+    .lunar-test-grid img{
+      width:100%;
+      height:410px;
+      object-fit:contain;
+      background:#050b13;
+    }
+    .lunar-deployment{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:10px;
+      align-items:stretch;
+      margin-top:18px;
+    }
+    .lunar-deployment .step{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      background:rgba(255,255,255,.025);
+    }
+    .lunar-deployment .step b{
+      display:block;
+      color:var(--accent);
+      margin-bottom:7px;
+    }
+    .lunar-deployment .step span{
+      color:#c3cfdf;
+      font-size:.9rem;
+    }
+    .lunar-reference-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .lunar-ref{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px;
+      background:rgba(255,255,255,.025);
+    }
+    .lunar-ref strong{
+      display:block;
+      margin-bottom:7px;
+    }
+    .lunar-ref p{
+      margin:0 0 12px;
+      color:var(--muted);
+    }
+    .lunar-ref-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .lunar-ref-links a{
+      display:inline-block;
+      padding:7px 11px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--accent);
+      text-decoration:none;
+      font-size:.82rem;
+      font-weight:700;
+    }
+    .lunar-ref-links a:hover{
+      border-color:var(--accent);
+    }
+    @media(max-width:850px){
+      .lunar-two-grid,
+      .lunar-architecture,
+      .lunar-test-grid,
+      .lunar-reference-grid{
+        grid-template-columns:1fr;
+      }
+      .lunar-two-grid img,
+      .lunar-test-grid img{
+        height:auto;
+      }
+      .lunar-test-grid .terrain-card{
+        grid-column:auto;
+      }
+      .lunar-deployment{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .lunar-carousel .rm-carousel-slide img{
+        height:58vw;
+        min-height:260px;
+        max-height:430px;
+      }
+    }
+    @media(max-width:560px){
+      .lunar-deployment{
+        grid-template-columns:1fr;
+      }
+      .lunar-carousel .rm-carousel-slide img{
+        height:62vw;
+        min-height:230px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="nav-wrap">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="brand-mark">YW</span>Yucan Wu</a>
+  </div>
+</div>
+
+<header class="project-hero">
+  <div class="container">
+    <a class="back" href="../index.html#projects">← Back to projects</a>
+    <span class="eyebrow">Space Robotics · Student Research / Innovation Project</span>
+    <h1>Lunar Lava Tube Exploration Robot</h1>
+    <p class="lead">A first-generation terrestrial prototype exploring how streaming 3D reconstruction, all-terrain mobility, and a reconfigurable sensor mast could be packaged into a robotic platform for lunar lava-tube reconnaissance. I contributed to the overall mechanical concept, top-side component layout, and the 3-DOF camera mast / gimbal.</p>
+    <div class="tags">
+      <span class="tag">Space Robotics</span>
+      <span class="tag">SolidWorks</span>
+      <span class="tag">Rocker-Bogie</span>
+      <span class="tag">MID-360 LiDAR</span>
+      <span class="tag">Structured-Light Camera</span>
+      <span class="tag">Carbon Fiber</span>
+    </div>
+
+    <div class="project-cover lunar-cover">
+      <img src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/03-overview/overview1.jpg" alt="Lunar lava tube exploration robot prototype outdoors at sunset">
+      <div class="project-cover-caption">
+        <strong>First-generation terrestrial prototype</strong>
+        <span>Six-wheel rocker-bogie chassis with onboard perception hardware</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:28px">
+  <div class="container project-layout">
+    <main class="project-main">
+
+      <section class="project-section">
+        <h2>Project overview</h2>
+        <p>The project explores a robotic platform for surveying lunar lava tubes as potential sites for future scientific investigation and infrastructure. Lunar lava tubes are attractive because their subsurface geometry may provide natural shielding from surface radiation, micrometeoroids, dust, and extreme temperature cycling, while their entrances and interiors create difficult mobility, darkness, communication, and deployment challenges.</p>
+        <p>Our first prototype therefore focused on three linked capabilities: <strong>terrain mobility</strong>, <strong>flexible visual / depth sensing</strong>, and <strong>continuous 3D reconstruction</strong>. The current robot is an Earth-based engineering prototype rather than a space-qualified system.</p>
+      </section>
+
+      <section class="project-section">
+        <h2>Research foundation</h2>
+        <div class="project-copy-grid">
+          <div class="info-card">
+            <h3>Streaming 3D reconstruction</h3>
+            <p>The perception concept builds on <strong>MeMix</strong>, external research by a fellow student and collaborators on long-horizon streaming 3D reconstruction. We treated that reconstruction capability as a research foundation to explore a lunar-lava-tube application rather than presenting the algorithm itself as our contribution.</p>
+          </div>
+          <div class="info-card">
+            <h3>Lunar lava-tube mission context</h3>
+            <p>Prior lunar-lava-tube studies highlight rugged entrances, rubble, darkness, limited direct communication, and the need for special deployment strategies. Vertical skylight entrances are especially relevant to our mother-child rover and tethered-descent concept.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>My contribution</h2>
+        <div class="project-copy-grid">
+          <div class="info-card">
+            <h3>Mechanical architecture</h3>
+            <ul>
+              <li>Contributed to the overall mechanical configuration for the lunar-use scenario.</li>
+              <li>Designed the top-side arrangement of sensing and onboard components.</li>
+              <li>Used SolidWorks to develop the mechanical layout around the rover platform.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Sensor mast / gimbal</h3>
+            <ul>
+              <li>Designed and assembled the 3-DOF yaw-pitch-pitch camera mechanism.</li>
+              <li>Enabled height adjustment and wide viewing coverage for obstacle look-over and side-wall observation.</li>
+              <li>Supported side-facing image capture while the rover moves forward for 3D reconstruction tests.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>First-generation system architecture</h2>
+        <div class="lunar-architecture">
+          <div class="info-card">
+            <strong>Rocker-bogie mobility</strong>
+            <p>A six-wheel rocker-bogie layout was selected to improve passive terrain adaptation over uneven surfaces and obstacle-like terrain.</p>
+          </div>
+          <div class="info-card">
+            <strong>Perception stack</strong>
+            <p>The prototype combines a Livox MID-360 LiDAR with a structured-light camera to support environmental perception and 3D reconstruction experiments in dark or weakly illuminated spaces.</p>
+          </div>
+          <div class="info-card">
+            <strong>3-DOF sensor mast</strong>
+            <p>The yaw-pitch-pitch mechanism can raise the camera above nearby obstacles, redirect sensing toward side walls, and adjust viewing direction without reorienting the whole chassis.</p>
+          </div>
+          <div class="info-card">
+            <strong>Lightweight / protected packaging</strong>
+            <p>Carbon-fiber plate was used to reduce prototype mass, while the electronics bay used a sealed reflective outer layer as a lightweight environmental-protection concept for dust and thermal reflection.</p>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:18px">
+          <strong>Prototype scope</strong>
+          <p style="margin-bottom:0">The mechanical design intentionally prioritized low mass under low-gravity operating assumptions. This is a terrestrial proof of concept; a flight design would still require launch-load, thermal-vacuum, radiation, sealing, and lunar-dust qualification.</p>
+        </div>
+
+        <div class="lunar-two-grid">
+          <div class="media-card">
+            <img src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/01-cad/cad1.jpg" alt="SolidWorks CAD of the lunar lava tube exploration robot">
+            <div class="media-caption">
+              <strong>System CAD</strong>
+              <span>Rocker-bogie chassis, carbon-fiber top plate, electronics enclosure, LiDAR, and articulated sensing hardware.</span>
+            </div>
+          </div>
+          <div class="media-card">
+            <img src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/03-overview/overview2.jpg" alt="Lunar lava tube exploration robot prototype">
+            <div class="media-caption">
+              <strong>Integrated prototype</strong>
+              <span>Physical first-generation platform with the sensing mast and protected onboard electronics installed.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>Prototype assembly & integration</h2>
+        <p>The prototype was assembled and iterated around the physical packaging of the chassis, sensor mast, electronics enclosure, and wiring. These photos show the transition from mechanical assembly to an integrated rover.</p>
+
+        <div class="rm-carousel lunar-carousel" data-carousel>
+          <div class="rm-carousel-head">
+            <div>
+              <strong>Assembly process</strong>
+              <span>Four selected integration photos · use arrows or swipe</span>
+            </div>
+            <div class="rm-carousel-controls">
+              <button class="rm-carousel-btn" type="button" data-carousel-prev aria-label="Previous assembly photo">←</button>
+              <button class="rm-carousel-btn" type="button" data-carousel-next aria-label="Next assembly photo">→</button>
+            </div>
+          </div>
+
+          <div class="rm-carousel-track" data-carousel-track tabindex="0">
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img loading="lazy" src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/02-assembly/assembly1.jpg" alt="Team assembling the rover electronics enclosure">
+              <div class="media-caption"><strong>Mechanical packaging</strong><span>Fitting the protected electronics enclosure to the rover platform.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img loading="lazy" src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/02-assembly/assembly2.jpg" alt="Outdoor integration work on the lunar lava tube rover">
+              <div class="media-caption"><strong>Outdoor integration</strong><span>Checking the rover as an assembled mobile platform.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img loading="lazy" src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/02-assembly/assembly3.jpg" alt="Team member integrating the lunar lava tube rover">
+              <div class="media-caption"><strong>Chassis integration</strong><span>Mechanical and hardware work around the six-wheel platform.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img loading="lazy" src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/02-assembly/assembly4.jpg" alt="Sensor mast integration on the lunar lava tube rover">
+              <div class="media-caption"><strong>Sensor-mast integration</strong><span>Working around the articulated camera / depth-sensing assembly.</span></div>
+            </div></div>
+          </div>
+          <div class="rm-carousel-dots" data-carousel-dots></div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>3D reconstruction & mobility testing</h2>
+        <p>Early testing focused on two questions: whether the sensing setup could support continuous scene reconstruction, and whether the rocker-bogie chassis could maintain useful mobility over obstacle-like terrain.</p>
+
+        <div class="lunar-test-grid">
+          <div class="media-card">
+            <img loading="lazy" src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/04-testing/3D-Modeling-Reconstruction-Test.jpg" alt="3D reconstruction test using the rover sensor mast">
+            <div class="media-caption">
+              <strong>3D reconstruction test</strong>
+              <span>Evaluating scene capture with the articulated sensor mast during prototype testing.</span>
+            </div>
+          </div>
+          <div class="media-card">
+            <img loading="lazy" src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/04-testing/3D-Modeling-Reconstruction-Test2.jpg" alt="Second 3D reconstruction test using the rover">
+            <div class="media-caption">
+              <strong>Reconstruction test · alternate view</strong>
+              <span>Testing sensing geometry and data capture around the prototype environment.</span>
+            </div>
+          </div>
+          <div class="media-card terrain-card">
+            <img loading="lazy" src="../assets/Lunar-Lava-Tube-Exploration-Robot/photo/04-testing/Test-of-chassis%27-adaptability-to-complex%20terrains-(such%20as%20the%20moon).jpg" alt="Rocker bogie chassis terrain adaptability test">
+            <div class="media-caption">
+              <strong>Terrain-adaptability test</strong>
+              <span>Earth-side obstacle testing of the rocker-bogie chassis as an analogue for rough lunar-lava-tube terrain.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>Vertical-skylight deployment concept</h2>
+        <p>A rover that works inside a lava tube must first reach it. For steep or near-vertical skylight entrances, we considered a <strong>mother-child rover architecture</strong>: the surface rover reaches and surveys the rim, then lowers a smaller exploration unit by tether. The tether can also provide a practical path for recovery, power, and communication while the sub-rover performs underground sensing.</p>
+
+        <div class="lunar-deployment">
+          <div class="step"><b>1 · Surface approach</b><span>Mother rover transports the exploration unit to the lava-tube entrance.</span></div>
+          <div class="step"><b>2 · Rim survey</b><span>Perception sensors inspect local geometry and select a deployment point.</span></div>
+          <div class="step"><b>3 · Tethered descent</b><span>A compact sub-rover is lowered through the skylight rather than driving over a vertical drop.</span></div>
+          <div class="step"><b>4 · Underground mapping</b><span>The sub-rover explores the interior while sending sensing data back through the mother platform.</span></div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>References & research basis</h2>
+        <p>Because this project is an application-oriented prototype built on existing research, I prefer to make the research basis explicit rather than imply that the reconstruction algorithm or lunar mission architecture originated with our team.</p>
+
+        <div class="lunar-reference-grid">
+          <div class="lunar-ref">
+            <strong>MeMix: Writing Less, Remembering More for Streaming 3D Reconstruction</strong>
+            <p>External 3D-reconstruction research used as the perception foundation for this application concept.</p>
+            <div class="lunar-ref-links">
+              <a href="https://arxiv.org/abs/2603.15330" target="_blank" rel="noopener">Paper</a>
+              <a href="https://dongjiacheng06.github.io/MeMix/" target="_blank" rel="noopener">Project page</a>
+              <a href="https://github.com/dongjiacheng06/MeMix" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+          <div class="lunar-ref">
+            <strong>A Scheme Design for Lunar Lava Tube Exploration and Development</strong>
+            <p>Background reference for lava-tube environments, vertical / slope entrances, exploration challenges, and main-sub detector concepts.</p>
+            <div class="lunar-ref-links">
+              <a href="https://doi.org/10.15982/j.issn.2096-9287.2024.20230146" target="_blank" rel="noopener">DOI / Paper</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar panel">
+      <h3>Project info</h3>
+      <dl>
+        <dt>Role</dt>
+        <dd>Mechanical Design Team Member</dd>
+
+        <dt>Period</dt>
+        <dd>2025</dd>
+
+        <dt>Mechanical focus</dt>
+        <dd>System Configuration · Component Layout · 3-DOF Sensor Mast</dd>
+
+        <dt>Mobility</dt>
+        <dd>6-Wheel Rocker-Bogie</dd>
+
+        <dt>Sensors</dt>
+        <dd>Livox MID-360 · Structured-Light Camera</dd>
+
+        <dt>Materials</dt>
+        <dd>Carbon-Fiber Plate · 3D-Printed Parts · Commercial Hardware</dd>
+
+        <dt>Tool</dt>
+        <dd>SolidWorks</dd>
+
+        <dt>Programs</dt>
+        <dd>Zhejiang University Qizhen Wenxue · 2025 Dandelion Innovation & Entrepreneurship Competition Preliminary Round</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>
