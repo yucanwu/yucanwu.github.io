@@ -1,1 +1,234 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Concrete Dragon Boat — Yucan Wu</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="nav-wrap"><div class="container nav"><a class="brand" href="../index.html"><span class="brand-mark">YW</span>Yucan Wu</a></div></div><header class="project-hero"><div class="container"><a class="back" href="../index.html#projects">← Back to projects</a><span class="eyebrow">3rd Prize · 2025</span><h1>Concrete Dragon Boat</h1><p class="lead">System architecture, hardware integration, and steering control for the 6th Zhejiang University Concrete Dragon Boat Competition.</p><div class="tags"><span class="tag">ESP32</span><span class="tag">Python</span><span class="tag">PWM</span><span class="tag">Autodesk Fusion</span></div><div class="stat-row"><div class="stat"><strong>3rd</strong><span>prize</span></div><div class="stat"><strong>2</strong><span>propellers</span></div><div class="stat"><strong>2</strong><span>rudders</span></div><div class="stat"><strong>ESP32</strong><span>controller</span></div></div></div></header><section class="section" style="padding-top:28px"><div class="container project-layout"><main class="project-main"><div class="content-block"><h2>My contribution</h2><ul><li>Developed the vessel configuration using dual-propeller differential steering and dual rudders.</li><li>Selected major components and reviewed the Autodesk Fusion model.</li><li>Assisted with concrete casting using 3D-printed inner and outer molds.</li><li>Designed component mounting and electrical wiring.</li><li>Programmed rudder control on an ESP32 using Python, receiving PWM input and generating PWM commands for the servos.</li></ul></div><div class="content-block"><h2>Media & evidence</h2><div class="media-grid"><div class="media-slot"><strong>Competition boat</strong><span>To be added</span></div><div class="media-slot"><strong>Propulsion / rudder system</strong><span>To be added</span></div><div class="media-slot"><strong>3D-printed mold</strong><span>To be added</span></div><div class="media-slot"><strong>Competition photo</strong><span>To be added</span></div></div></div></main><aside class="sidebar panel"><h3>Project info</h3><dl><dt>Role</dt><dd>System Designer · Hardware Integrator · Control Programmer</dd><dt>Period</dt><dd>2025</dd></dl></aside></div></section></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Concrete Dragon Boat — Yucan Wu</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .dragon-cover img{object-fit:cover;object-position:center 62%}
+    .dragon-design-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+    .dragon-design-grid .media-card{display:flex;flex-direction:column}
+    .dragon-design-grid img{width:100%;height:300px;object-fit:contain;background:#eef2f6}
+    .dragon-design-grid .media-caption{flex:1}
+    .dragon-test-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+    .dragon-test-grid .media-card{display:flex;flex-direction:column}
+    .dragon-test-grid img{width:100%;height:300px;object-fit:cover}
+    .dragon-test-grid .media-caption{flex:1}
+    .dragon-process-flow{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:18px 0;color:#c3cfdf}
+    .dragon-process-flow span{border:1px solid var(--line);border-radius:999px;padding:7px 11px;background:rgba(255,255,255,.025);font-size:.84rem}
+    .dragon-process-flow b{color:var(--accent)}
+    .dragon-carousel .rm-carousel-slide img{height:500px;object-fit:contain;background:#050b13}
+    @media(max-width:850px){
+      .dragon-design-grid,.dragon-test-grid{grid-template-columns:1fr}
+      .dragon-design-grid img,.dragon-test-grid img{height:auto;object-fit:contain}
+      .dragon-carousel .rm-carousel-slide img{height:58vw;min-height:260px;max-height:430px}
+    }
+    @media(max-width:560px){
+      .dragon-carousel .rm-carousel-slide img{height:62vw;min-height:230px}
+    }
+  </style>
+</head>
+<body>
+<div class="nav-wrap">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="brand-mark">YW</span>Yucan Wu</a>
+  </div>
+</div>
+
+<header class="project-hero">
+  <div class="container">
+    <a class="back" href="../index.html#projects">← Back to projects</a>
+    <span class="eyebrow">3rd Prize · 2025</span>
+    <h1>Concrete Dragon Boat</h1>
+    <p class="lead">A competition-scale concrete vessel integrating hull design, reinforced casting, dual-propeller propulsion, dual-rudder steering, and onboard control. I focused on system architecture, component selection, hardware integration, and rudder control.</p>
+    <div class="tags">
+      <span class="tag">System Design</span>
+      <span class="tag">Autodesk Fusion</span>
+      <span class="tag">ESP32</span>
+      <span class="tag">PWM Control</span>
+      <span class="tag">Concrete Fabrication</span>
+    </div>
+
+    <div class="project-cover dragon-cover">
+      <img src="../assets/Concrete-Dragon-Boat/boat-photo/overview/boat-overview.jpg" alt="Concrete dragon boat displayed at the competition">
+      <div class="project-cover-caption">
+        <strong>Competition boat</strong>
+        <span>2025 Zhejiang University Concrete Dragon Boat Competition</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:28px">
+  <div class="container project-layout">
+    <main class="project-main">
+
+      <section class="project-section">
+        <h2>Project overview</h2>
+        <p>The boat was designed as a small remotely controlled concrete vessel for a university competition. The system used two propellers for differential thrust together with two rudders for steering, combining a reinforced concrete hull with onboard electronics, actuators, and waterproofed hardware integration.</p>
+      </section>
+
+      <section class="project-section">
+        <h2>My contribution</h2>
+        <div class="project-copy-grid">
+          <div class="info-card">
+            <h3>System & mechanical design</h3>
+            <ul>
+              <li>Proposed the overall vessel configuration using dual propellers and dual rudders.</li>
+              <li>Selected major propulsion, steering, and onboard components.</li>
+              <li>Reviewed the hull model in Autodesk Fusion and checked system packaging.</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Hardware & control</h3>
+            <ul>
+              <li>Designed component mounting and electrical wiring inside the hull.</li>
+              <li>Programmed the ESP32-based rudder control, mapping PWM input to servo commands.</li>
+              <li>Assisted with concrete casting using 3D-printed inner and outer molds.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>Design & simulation</h2>
+        <p>Before fabrication, the hull geometry and internal packaging were developed digitally. The team also used flow simulation to examine the hull concept and visualize the surrounding velocity field before committing to the physical build.</p>
+        <div class="dragon-design-grid">
+          <div class="media-card">
+            <img src="../assets/Concrete-Dragon-Boat/boat-photo/cad-simulation/cad-preparing.jpg" alt="Team preparing the concrete dragon boat CAD model">
+            <div class="media-caption"><strong>CAD preparation</strong><span>Hull geometry and packaging work during the digital design stage.</span></div>
+          </div>
+          <div class="media-card">
+            <img src="../assets/Concrete-Dragon-Boat/boat-photo/cad-simulation/cad.jpg" alt="Concrete dragon boat hull CAD">
+            <div class="media-caption"><strong>Hull model</strong><span>Digital hull geometry used to support mold design and fabrication planning.</span></div>
+          </div>
+          <div class="media-card">
+            <img src="../assets/Concrete-Dragon-Boat/boat-photo/cad-simulation/simulation1.jpg" alt="Flow simulation around the concrete dragon boat hull">
+            <div class="media-caption"><strong>Flow visualization</strong><span>Team-level simulation used to inspect the flow field around the hull concept.</span></div>
+          </div>
+          <div class="media-card">
+            <img src="../assets/Concrete-Dragon-Boat/boat-photo/cad-simulation/simulation2.jpg" alt="Alternative view of flow simulation around the hull">
+            <div class="media-caption"><strong>Simulation view</strong><span>Additional velocity-field visualization from the design stage.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>Fabrication & assembly</h2>
+        <p>The hull was built through a multi-step process combining 3D-printed molds, steel-wire reinforcement, concrete casting, surface finishing, waterproofing, and final installation of propulsion and control hardware.</p>
+
+        <div class="dragon-process-flow">
+          <span>Mold assembly</span><b>→</b>
+          <span>Wire reinforcement</span><b>→</b>
+          <span>Concrete mixing</span><b>→</b>
+          <span>Casting</span><b>→</b>
+          <span>Finishing</span><b>→</b>
+          <span>Waterproofing</span><b>→</b>
+          <span>Hardware installation</span>
+        </div>
+
+        <div class="rm-carousel dragon-carousel" data-carousel>
+          <div class="rm-carousel-head">
+            <div>
+              <strong>Build process</strong>
+              <span>Nine selected fabrication photos · use arrows or swipe</span>
+            </div>
+            <div class="rm-carousel-controls">
+              <button class="rm-carousel-btn" type="button" data-carousel-prev aria-label="Previous fabrication photo">←</button>
+              <button class="rm-carousel-btn" type="button" data-carousel-next aria-label="Next fabrication photo">→</button>
+            </div>
+          </div>
+
+          <div class="rm-carousel-track" data-carousel-track tabindex="0">
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/01-Assemble-the-3D-printed-model-ship-mold.jpg" alt="Assembly of 3D printed boat mold">
+              <div class="media-caption"><strong>01 · Mold assembly</strong><span>Assembling the 3D-printed mold used to form the hull.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/02-Fabricate-the-steel-wire-mesh-framework.jpg" alt="Fabrication of steel wire mesh framework">
+              <div class="media-caption"><strong>02 · Reinforcement framework</strong><span>Preparing the steel-wire mesh used to reinforce the concrete shell.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/03-Mixing-cement1.jpg" alt="Measuring material for concrete mixture">
+              <div class="media-caption"><strong>03 · Material preparation</strong><span>Measuring and preparing the cement mixture for casting.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/04-Mixing-cement2.jpg" alt="Mixing concrete for the hull">
+              <div class="media-caption"><strong>04 · Concrete mixing</strong><span>Preparing the concrete mixture before application to the reinforced mold.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/05-Apply-cement1.jpg" alt="Applying concrete to the hull mold">
+              <div class="media-caption"><strong>05 · Concrete application</strong><span>Applying the mixture over the reinforced mold structure.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/06-Apply-cement2.jpg" alt="Team applying concrete to the hull">
+              <div class="media-caption"><strong>06 · Hull forming</strong><span>Continuing the shell build and shaping the concrete surface.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/07-Remove-the-flaws-of-the-cement-dragon-boat.jpg" alt="Finishing the concrete dragon boat hull">
+              <div class="media-caption"><strong>07 · Surface finishing</strong><span>Removing local defects and refining the completed concrete shell.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/08-Apply-waterproof-adhesive.jpg" alt="Applying waterproof coating to concrete hull">
+              <div class="media-caption"><strong>08 · Waterproofing</strong><span>Applying a waterproof layer before installation of onboard hardware.</span></div>
+            </div></div>
+            <div class="rm-carousel-slide"><div class="media-card">
+              <img src="../assets/Concrete-Dragon-Boat/boat-photo/assembly/09-Install-components.jpg" alt="Installing propulsion and electronics in the concrete boat">
+              <div class="media-caption"><strong>09 · Hardware integration</strong><span>Installing propulsion, steering, electronics, and wiring inside the finished hull.</span></div>
+            </div></div>
+          </div>
+          <div class="rm-carousel-dots" data-carousel-dots></div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>System integration & testing</h2>
+        <p>After the hull was completed, the propulsion, steering, power, and control hardware were integrated and tested before the competition. Testing progressed from bench-side checks to water trials and finally full operation on the competition lake.</p>
+        <div class="dragon-test-grid">
+          <div class="media-card">
+            <img src="../assets/Concrete-Dragon-Boat/boat-photo/testing/pre-testing.jpg" alt="Internal hardware installation before testing">
+            <div class="media-caption"><strong>Internal integration</strong><span>Propulsion, steering, battery, wiring, and control hardware installed inside the hull.</span></div>
+          </div>
+          <div class="media-card">
+            <img src="../assets/Concrete-Dragon-Boat/boat-photo/testing/pre-testing2.jpg" alt="Concrete dragon boat prepared beside the lake">
+            <div class="media-caption"><strong>Pre-launch check</strong><span>Final system inspection before water testing.</span></div>
+          </div>
+          <div class="media-card">
+            <img src="../assets/Concrete-Dragon-Boat/boat-photo/testing/testing-in-lake.jpg" alt="Concrete dragon boat operating on the lake">
+            <div class="media-caption"><strong>Water test</strong><span>Full-boat test of propulsion and steering on the lake.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h2>Competition result</h2>
+        <p>The team received <strong>Third Prize</strong> in the 6th Zhejiang University Concrete Dragon Boat Competition in 2025.</p>
+      </section>
+    </main>
+
+    <aside class="sidebar panel">
+      <h3>Project info</h3>
+      <dl>
+        <dt>Role</dt>
+        <dd>System Designer · Hardware Integrator · Control Programmer</dd>
+        <dt>Period</dt>
+        <dd>2025</dd>
+        <dt>Propulsion</dt>
+        <dd>Dual Propellers</dd>
+        <dt>Steering</dt>
+        <dd>Dual Rudders · ESP32</dd>
+        <dt>CAD</dt>
+        <dd>Autodesk Fusion</dd>
+        <dt>Fabrication</dt>
+        <dd>3D-Printed Mold · Reinforced Concrete</dd>
+        <dt>Award</dt>
+        <dd>Third Prize · 6th Zhejiang University Concrete Dragon Boat Competition</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>
