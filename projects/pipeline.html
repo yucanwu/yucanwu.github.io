@@ -1,1 +1,242 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pipeline Rust-Removal Robot — Yucan Wu</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="nav-wrap"><div class="container nav"><a class="brand" href="../index.html"><span class="brand-mark">YW</span>Yucan Wu</a></div></div><header class="project-hero"><div class="container"><a class="back" href="../index.html#projects">← Back to projects</a><span class="eyebrow">Summer research project</span><h1>Large-Pipeline Rust-Removal Robot</h1><p class="lead">Mechanical system development for a robot intended to operate inside large pipelines.</p><div class="tags"><span class="tag">Field Robotics</span><span class="tag">SolidWorks</span><span class="tag">3D Printing</span><span class="tag">Carbon Fiber</span></div></div></header><section class="section" style="padding-top:28px"><div class="container project-layout"><main class="project-main"><div class="content-block"><h2>Overview</h2><p>A summer research project focused on a mobile robot for rust removal inside large pipes.</p></div><div class="content-block"><h2>My contribution</h2><ul><li>Participated in overall functional and structural design.</li><li>Designed and assembled the upper electronics enclosure.</li><li>Used SolidWorks mechanical simulation and designed components for 3D printing and carbon-fiber fabrication.</li></ul></div><div class="content-block"><h2>Media & evidence</h2><div class="media-grid"><div class="media-slot"><strong>Robot prototype</strong><span>To be added</span></div><div class="media-slot"><strong>Electronics enclosure</strong><span>To be added</span></div><div class="media-slot"><strong>CAD assembly</strong><span>To be added</span></div><div class="media-slot"><strong>Simulation result</strong><span>To be added</span></div></div></div></main><aside class="sidebar panel"><h3>Project info</h3><dl><dt>Role</dt><dd>Mechanical Design Team Member</dd><dt>Period</dt><dd>Summer 2026</dd></dl></aside></div></section></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pipeline Rust-Removal Robot — Yucan Wu</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><span class="brand-mark">YW</span>Yucan Wu</a>
+    </div>
+  </div>
+
+  <header class="project-hero">
+    <div class="container">
+      <a class="back" href="../index.html#projects">← Back to projects</a>
+      <span class="eyebrow">Summer Research · 2026</span>
+      <h1>Large-Pipeline Rust-Removal Robot</h1>
+      <p class="lead">A four-person summer research project developing a mobile robot for rust removal on large steel pipelines, with magnetic adhesion, four-wheel steering, and force-controlled surface treatment.</p>
+      <div class="tags">
+        <span class="tag">Field Robotics</span>
+        <span class="tag">Mechanical Design</span>
+        <span class="tag">System Integration</span>
+        <span class="tag">SolidWorks</span>
+        <span class="tag">3D Printing</span>
+        <span class="tag">Carbon Fiber</span>
+      </div>
+
+      <div class="project-cover">
+        <img src="../assets/Rust-Removal-Robot/photo/testing/Corrosion-removal-test2.jpg" alt="Pipeline rust-removal robot prototype during rust-removal testing on a curved steel pipe">
+        <div class="project-cover-caption">
+          <strong>2.0 prototype · rust-removal subsystem test</strong>
+          <span>Summer 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:28px">
+    <div class="container project-layout">
+      <main class="project-main">
+
+        <section class="project-section">
+          <h2>Project Overview</h2>
+          <p>This project built on an earlier graduation-design prototype and substantially reworked the robot into two new iterations, 1.0 and 2.0. The goal was to create a platform that could adhere to the curved surface of a large steel pipeline, maneuver along the pipe, and remove corrosion with a controlled polishing mechanism.</p>
+          <p>The team developed the mechanical layout, steering modules, rust-removal mechanism, electronics integration, and prototype testing as a four-person group. The main change from 1.0 to 2.0 was a revision of the wheel / steering structure to improve motion on a curved pipe surface.</p>
+
+          <div class="status-strip">
+            <div class="status-item"><b>Team</b><span>4-person summer research group</span></div>
+            <div class="status-item"><b>Iterations</b><span>1.0 → 2.0 prototype development</span></div>
+            <div class="status-item"><b>Current status</b><span>Motion and rust-removal subsystems tested separately</span></div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2>System Concept</h2>
+          <p>The robot combines adhesion, mobility, surface treatment, and force regulation into one compact platform.</p>
+
+          <div class="project-copy-grid">
+            <div class="info-card">
+              <h3>Magnetic adhesion</h3>
+              <p>Custom high-force magnetic wheels were selected to keep the robot attached to ferromagnetic pipeline surfaces during operation.</p>
+            </div>
+            <div class="info-card">
+              <h3>Four steering modules</h3>
+              <p>Four independently steerable wheel modules allow the chassis to change direction on a curved pipe rather than being constrained to a single travel direction.</p>
+            </div>
+            <div class="info-card">
+              <h3>Tangential rust removal</h3>
+              <p>A modified electric polishing tool is oriented approximately tangential to the pipe surface so the abrasive wheel can remove corrosion while the vehicle travels.</p>
+            </div>
+            <div class="info-card">
+              <h3>Force regulation</h3>
+              <p>A lead-screw lifting mechanism and force sensor are used to adjust contact between the polishing head and the pipe, providing a basis for controlling removal pressure.</p>
+            </div>
+          </div>
+
+          <div class="media-single media-card wide rm-cad-hero">
+            <img src="../assets/Rust-Removal-Robot/photo/cad/1.0cad-functioinal-simulate.png" alt="CAD side view of the 1.0 robot positioned on a curved pipeline surface">
+            <div class="media-caption">
+              <strong>1.0 functional-layout CAD</strong>
+              <span>Side view used to examine the relationship between the chassis, steering modules, treatment mechanism, and curved pipe surface.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2>Mechanical Iteration · 1.0 → 2.0</h2>
+          <p>Both versions were developed during the summer project. The second iteration retained the overall system concept while revising the steering-wheel structure for better compatibility with motion on the pipe surface.</p>
+
+          <div class="rm-cad-grid">
+            <div class="media-card rm-cad-card">
+              <img src="../assets/Rust-Removal-Robot/photo/cad/1.0cad.png" alt="CAD model of version 1.0 of the pipeline rust-removal robot">
+              <div class="media-caption">
+                <strong>Version 1.0</strong>
+                <span>First team-developed prototype architecture after inheriting the earlier project baseline.</span>
+              </div>
+            </div>
+            <div class="media-card rm-cad-card">
+              <img src="../assets/Rust-Removal-Robot/photo/cad/2.0cad.jpg" alt="CAD model of version 2.0 of the pipeline rust-removal robot">
+              <div class="media-caption">
+                <strong>Version 2.0</strong>
+                <span>Revised prototype with changes centered on the wheel / steering arrangement and overall integration.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-note"><strong>Contribution boundary:</strong> I participated in the system-level design discussions throughout both iterations, but I did not independently design the steering or rust-removal mechanisms.</div>
+        </section>
+
+        <section class="project-section">
+          <h2>My Contribution</h2>
+          <div class="project-copy-grid">
+            <div class="info-card">
+              <h3>System development & integration</h3>
+              <ul>
+                <li>Participated throughout mechanical and functional design discussions.</li>
+                <li>Contributed to mechanical and hardware assembly for both prototypes.</li>
+                <li>Participated in prototype debugging and motion / rust-removal testing.</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h3>Directly designed by me</h3>
+              <ul>
+                <li>Upper electronics layout and packaging.</li>
+                <li>Electronics compartments / enclosures and their assembly.</li>
+                <li>Integration of the packaged electronics with the rest of the chassis.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="media-pair">
+            <div class="media-card">
+              <img src="../assets/Rust-Removal-Robot/photo/overveiw/overview-up.jpg" alt="Top view of the robot showing electronics layout and upper hardware compartments">
+              <div class="media-caption">
+                <strong>Electronics packaging</strong>
+                <span>Top view of the assembled hardware layout and enclosure system — the portion of the mechanical design I directly owned.</span>
+              </div>
+            </div>
+            <div class="media-card">
+              <img src="../assets/Rust-Removal-Robot/photo/overveiw/overview-1.jpg" alt="Assembled version 2.0 pipeline rust-removal robot prototype">
+              <div class="media-caption">
+                <strong>Integrated prototype</strong>
+                <span>Version 2.0 after mechanical and hardware integration.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2>Fabrication & Assembly</h2>
+          <p>The prototypes combined 3D-printed parts, machined / purchased mechanical components, carbon-fiber plates, fasteners, wiring, and electronics. I participated throughout the mechanical and hardware build process.</p>
+
+          <div class="rm-carousel" data-carousel>
+            <div class="rm-carousel-head">
+              <div>
+                <strong>Prototype build process</strong>
+                <span>1.0 assembly → 2.0 steering modules → system integration → design review</span>
+              </div>
+              <div class="rm-carousel-controls">
+                <button class="rm-carousel-btn" type="button" aria-label="Previous image" data-carousel-prev>←</button>
+                <button class="rm-carousel-btn" type="button" aria-label="Next image" data-carousel-next>→</button>
+              </div>
+            </div>
+            <div class="rm-carousel-track" data-carousel-track tabindex="0">
+              <div class="rm-carousel-slide media-card">
+                <img src="../assets/Rust-Removal-Robot/photo/assembly/01-1.0assembly.jpg" alt="Version 1.0 steering and wheel modules during assembly">
+                <div class="media-caption"><strong>1.0 assembly</strong><span>Wheel / steering modules during prototype fabrication.</span></div>
+              </div>
+              <div class="rm-carousel-slide media-card">
+                <img src="../assets/Rust-Removal-Robot/photo/assembly/02-2.0assembly.jpg" alt="Version 2.0 steering modules during assembly">
+                <div class="media-caption"><strong>2.0 module assembly</strong><span>Revised modules prepared for integration.</span></div>
+              </div>
+              <div class="rm-carousel-slide media-card">
+                <img src="../assets/Rust-Removal-Robot/photo/assembly/03-2.0assembly.jpg" alt="Version 2.0 modules assembled around the central chassis">
+                <div class="media-caption"><strong>2.0 chassis integration</strong><span>Mechanical modules brought together around the central chassis structure.</span></div>
+              </div>
+              <div class="rm-carousel-slide media-card">
+                <img src="../assets/Rust-Removal-Robot/photo/assembly/04-Have-a-meeting-with-the-supervisor-to-discuss.jpg" alt="Research team discussing the assembled robot with the supervisor">
+                <div class="media-caption"><strong>Design review & debugging</strong><span>Team discussion around the assembled prototype during development.</span></div>
+              </div>
+            </div>
+            <div class="rm-carousel-dots" data-carousel-dots></div>
+          </div>
+        </section>
+
+        <section class="project-section">
+          <h2>Prototype Testing</h2>
+          <p>Because the custom magnetic wheels had a long fabrication lead time, the summer prototype was not tested as a fully integrated magnetic climbing system. Instead, we separately tested chassis motion / steering and the rust-removal mechanism.</p>
+
+          <div class="rm-integration-grid">
+            <div class="media-card">
+              <img src="../assets/Rust-Removal-Robot/photo/testing/motion-test.jpg" alt="Ground motion test of the pipeline robot using a remote controller">
+              <div class="media-caption">
+                <strong>Motion test</strong>
+                <span>Ground testing of chassis movement and steering before magnetic-wheel integration.</span>
+              </div>
+            </div>
+            <div class="media-card">
+              <img src="../assets/Rust-Removal-Robot/photo/testing/Corrosion-removal-test1.png" alt="Pipeline robot positioned on a steel pipe for rust-removal testing">
+              <div class="media-caption">
+                <strong>Rust-removal test</strong>
+                <span>Subsystem testing on a curved steel pipe to evaluate polishing contact and mechanical positioning.</span>
+              </div>
+            </div>
+            <div class="media-card">
+              <img src="../assets/Rust-Removal-Robot/photo/testing/Remote-control-screen-image.jpg" alt="Remote visual feedback screen during pipeline testing">
+              <div class="media-caption">
+                <strong>Remote visual feedback</strong>
+                <span>Operator-side view used during prototype testing.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top:20px">
+            <strong>Current limitation & next step</strong>
+            <p style="margin-bottom:0">The prototype has not yet completed a realistic magnetic-adhesion test on a steel pipeline. The next iteration is intended to further refine the chassis structure, install the custom magnetic wheels, and validate integrated adhesion, steering, and rust removal on an actual pipe surface.</p>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="sidebar panel">
+        <h3>Project info</h3>
+        <dl>
+          <dt>Role</dt><dd>Mechanical Design & Integration Team Member</dd>
+          <dt>Period</dt><dd>Summer 2026</dd>
+          <dt>Team</dt><dd>4 members</dd>
+          <dt>Direct design ownership</dt><dd>Electronics layout & enclosure</dd>
+          <dt>Project basis</dt><dd>Iterated from an earlier graduation-design prototype</dd>
+          <dt>Tools</dt><dd>SolidWorks · 3D Printing · Carbon Fiber Parts</dd>
+          <dt>Status</dt><dd>Version 2.0 built · subsystem testing completed</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <script src="../assets/site.js"></script>
+</body>
+</html>
