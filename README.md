@@ -1,7 +1,3 @@
-# Yucan Wu — Engineering Portfolio
+# Static site
 
-Personal engineering/research portfolio for robotics, mechatronics, and mechanical-system projects.
-
-Live site: https://yucanwu.github.io
-
-The site is intentionally lightweight and static so project pages can be updated directly with CAD renders, prototype photos, demo videos, architecture diagrams, and public code links.
+The public root intentionally contains no profile information.
